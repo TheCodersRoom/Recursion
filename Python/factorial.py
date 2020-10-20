@@ -1,12 +1,15 @@
-def factorial(x):
-    """This is a recursive function
-    to find the factorial of an integer"""
+def recur_factorial(n):
+   if n == 1:
+       return n
+   else:
+       return n*recur_factorial(n-1)
 
-    if x == 1:
-        return 1
-    else:
-        return (x * factorial(x-1))
+num = 7
 
-
-num = 3
-print("The factorial of", num, "is", factorial(num))
+# check if the number is negative
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   print("The factorial of", num, "is", recur_factorial(num))
